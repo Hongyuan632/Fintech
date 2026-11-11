@@ -1,0 +1,24 @@
+{
+  "chosen": "lr_none",
+  "family": "逻辑回归",
+  "calibration": "none",
+  "features": "raw+eng",
+  "best_params": {
+    "C": 0.1
+  },
+  "selection_rule": "1) 模型族：比较两族未校准版本的验证集 ROC-AUC，用配对 bootstrap 求差值的 95% 区间；区间不含 0 时选 AUC 高者，否则选逻辑回归（更易解释）。2) 校准方式：在所选模型族内，选验证集 Brier Score 最低的一种（none / sigmoid / isotonic）。3) 平局规则（事后补充）：Brier 与最低值相差不足 0.001 的方案视为相同，按 未校准 → Platt → 保序回归 的顺序选最简单者。",
+  "rule2_choice": "lr_isotonic",
+  "trained_on": "train split (21,000)",
+  "seed": 42,
+  "raw_sha256": "e7becb953a45e8d81f49da13f6982ea3d115848d1859777dccfdcc93792d248c",
+  "versions": {
+    "python": "3.11.4",
+    "sklearn": "1.9.1",
+    "pandas": "3.1.1",
+    "numpy": "2.4.6"
+  },
+  "excluded_inputs": [
+    "ID",
+    "SEX"
+  ]
+}

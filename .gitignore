@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# 原始数据按 CC BY 4.0 可再分发，但仓库只保存获取步骤与来源记录
+data/raw/*.csv
+data/raw/*.xls
+# Office 临时锁文件
+~$*
+.pytest_cache/
+# 课程论文、选题报告、立项书只保存在本地
+docs/

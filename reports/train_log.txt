@@ -1,0 +1,20 @@
+﻿[03:02:36] 训练集 21000，验证集 4500（测试集未读取）
+[03:02:42] lr raw     CV AUC 0.7735±0.0031 Brier 0.1371 {'C': 0.01}
+[03:02:44] lr raw+eng CV AUC 0.7786±0.0044 Brier 0.1355 {'C': 0.1}
+[03:03:40] rf raw     CV AUC 0.7840±0.0027 Brier 0.1349 {'max_depth': 14, 'max_features': 'sqrt', 'min_samples_leaf': 40}
+[03:05:00] rf raw+eng CV AUC 0.7869±0.0042 Brier 0.1339 {'max_depth': 14, 'max_features': 0.33, 'min_samples_leaf': 40}
+[03:05:01] lr sigmoid 校准完成
+[03:05:02] lr isotonic 校准完成
+[03:06:12] rf sigmoid 校准完成
+[03:07:23] rf isotonic 校准完成
+[03:07:31] baseline      AUC 0.5000 KS 0.0000 PR-AUC 0.6106 AP 0.2211 Brier 0.1722 ECE 0.0207
+[03:07:31] lr_none       AUC 0.7835 KS 0.4328 PR-AUC 0.5689 AP 0.5692 Brier 0.1325 ECE 0.0159
+[03:07:31] lr_sigmoid    AUC 0.7835 KS 0.4328 PR-AUC 0.5689 AP 0.5692 Brier 0.1325 ECE 0.0164
+[03:07:31] lr_isotonic   AUC 0.7832 KS 0.4296 PR-AUC 0.5690 AP 0.5561 Brier 0.1324 ECE 0.0116
+[03:07:31] rf_none       AUC 0.7884 KS 0.4422 PR-AUC 0.5711 AP 0.5716 Brier 0.1314 ECE 0.0121
+[03:07:31] rf_sigmoid    AUC 0.7884 KS 0.4422 PR-AUC 0.5711 AP 0.5716 Brier 0.1316 ECE 0.0208
+[03:07:31] rf_isotonic   AUC 0.7872 KS 0.4357 PR-AUC 0.5746 AP 0.5574 Brier 0.1316 ECE 0.0110
+[03:07:31] AUC(RF) − AUC(LR) = 0.0049，95% CI [-0.003375820357262771, 0.013221828117063093]
+[03:07:31] 规则 2 选 isotonic；加平局规则后选 none
+[03:07:31] 选定：lr_none
+[03:07:31] 已保存模型、验证集预测与结果

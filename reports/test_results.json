@@ -1,0 +1,278 @@
+{
+ "policy_version": "v1",
+ "model": "lr_none",
+ "t1": 0.15,
+ "t2": 0.4,
+ "n_test": 4500,
+ "defaults": 995,
+ "default_rate": 0.22111111111111112,
+ "metrics": {
+  "roc_auc": 0.7758495759826236,
+  "ks": 0.4249048380275128,
+  "pr_auc": 0.5451367518205711,
+  "ap": 0.5456011063607673,
+  "brier": 0.13593160359478376,
+  "log_loss": 0.43340679683260985,
+  "ece": 0.014541068201823978,
+  "mean_p": 0.21809425695116055
+ },
+ "ci95": {
+  "roc_auc": [
+   0.7589427520788292,
+   0.7933811927630007
+  ],
+  "ap": [
+   0.5141595603103845,
+   0.5799535528694568
+  ],
+  "brier": [
+   0.12911493131679083,
+   0.14265488286964073
+  ]
+ },
+ "baseline": {
+  "p": 0.22123809523809523,
+  "brier": 0.17222100377928948,
+  "ap": 0.22111111111111112,
+  "roc_auc": 0.5
+ },
+ "calibration": [
+  {
+   "n": 450,
+   "mean_p": 0.05862,
+   "obs": 0.05778
+  },
+  {
+   "n": 450,
+   "mean_p": 0.08101,
+   "obs": 0.06222
+  },
+  {
+   "n": 450,
+   "mean_p": 0.09486,
+   "obs": 0.10222
+  },
+  {
+   "n": 450,
+   "mean_p": 0.10946,
+   "obs": 0.11333
+  },
+  {
+   "n": 450,
+   "mean_p": 0.12846,
+   "obs": 0.13333
+  },
+  {
+   "n": 450,
+   "mean_p": 0.15018,
+   "obs": 0.15333
+  },
+  {
+   "n": 450,
+   "mean_p": 0.1852,
+   "obs": 0.19778
+  },
+  {
+   "n": 450,
+   "mean_p": 0.25686,
+   "obs": 0.25333
+  },
+  {
+   "n": 450,
+   "mean_p": 0.4085,
+   "obs": 0.46444
+  },
+  {
+   "n": 450,
+   "mean_p": 0.70779,
+   "obs": 0.67333
+  }
+ ],
+ "threshold_at_t2": {
+  "tn": 3257,
+  "fp": 248,
+  "fn": 583,
+  "tp": 412,
+  "precision": 0.6242424242424243,
+  "recall": 0.414070351758794,
+  "f1": 0.49788519637462236,
+  "accuracy": 0.8153333333333334,
+  "accuracy_all_negative": 0.7788888888888889
+ },
+ "policy": {
+  "t1": 0.15,
+  "t2": 0.4,
+  "n": 4500,
+  "defaults": 995,
+  "n_pass": 2473,
+  "pass_rate": 0.5495555555555556,
+  "pass_default_rate": 0.09704811969268096,
+  "n_review": 1367,
+  "review_rate": 0.30377777777777776,
+  "review_default_rate": 0.25091441111923923,
+  "n_suspend": 660,
+  "suspend_rate": 0.14666666666666667,
+  "suspend_default_rate": 0.6242424242424243,
+  "high_recall": 0.414070351758794,
+  "false_block_rate": 0.07075606276747504,
+  "miss_rate": 0.5859296482412061,
+  "leak_rate": 0.24120603015075376,
+  "review_share_of_defaults": 0.34472361809045227
+ },
+ "other_candidates": [
+  {
+   "t1": 0.1,
+   "t2": 0.3,
+   "n": 4500,
+   "defaults": 995,
+   "n_pass": 1294,
+   "pass_rate": 0.28755555555555556,
+   "pass_default_rate": 0.07032457496136012,
+   "n_review": 2283,
+   "review_rate": 0.5073333333333333,
+   "review_default_rate": 0.16732369689005694,
+   "n_suspend": 923,
+   "suspend_rate": 0.2051111111111111,
+   "suspend_default_rate": 0.5655471289274107,
+   "high_recall": 0.5246231155778894,
+   "false_block_rate": 0.11440798858773181,
+   "miss_rate": 0.47537688442211057,
+   "leak_rate": 0.0914572864321608,
+   "review_share_of_defaults": 0.38391959798994973
+  },
+  {
+   "t1": 0.2,
+   "t2": 0.5,
+   "n": 4500,
+   "defaults": 995,
+   "n_pass": 3068,
+   "pass_rate": 0.6817777777777778,
+   "pass_default_rate": 0.11473272490221642,
+   "n_review": 907,
+   "review_rate": 0.20155555555555554,
+   "review_default_rate": 0.31863285556780596,
+   "n_suspend": 525,
+   "suspend_rate": 0.11666666666666667,
+   "suspend_default_rate": 0.6742857142857143,
+   "high_recall": 0.35577889447236183,
+   "false_block_rate": 0.048787446504992865,
+   "miss_rate": 0.6442211055276382,
+   "leak_rate": 0.35376884422110555,
+   "review_share_of_defaults": 0.2904522613065327
+  }
+ ],
+ "audit": [
+  {
+   "dimension": "性别",
+   "group": "男",
+   "small_sample": false,
+   "n": 1796,
+   "defaults": 430,
+   "pass_rate": 0.5244988864142539,
+   "review_rate": 0.3106904231625835,
+   "suspend_rate": 0.16481069042316257,
+   "pass_default_rate": 0.10615711252653928,
+   "false_block_rate": 0.08565153733528551,
+   "miss_rate": 0.5837209302325581,
+   "leak_rate": 0.23255813953488372,
+   "mean_pd": 0.22830788966975438,
+   "default_rate": 0.23942093541202672
+  },
+  {
+   "dimension": "性别",
+   "group": "女",
+   "small_sample": false,
+   "n": 2704,
+   "defaults": 565,
+   "pass_rate": 0.566198224852071,
+   "review_rate": 0.29918639053254437,
+   "suspend_rate": 0.1346153846153846,
+   "pass_default_rate": 0.09144350097975179,
+   "false_block_rate": 0.06124357176250585,
+   "miss_rate": 0.5876106194690266,
+   "leak_rate": 0.24778761061946902,
+   "mean_pd": 0.21131035001233128,
+   "default_rate": 0.20894970414201183
+  },
+  {
+   "dimension": "年龄段",
+   "group": "21–29",
+   "small_sample": false,
+   "n": 1457,
+   "defaults": 321,
+   "pass_rate": 0.5518188057652711,
+   "review_rate": 0.2862045298558682,
+   "suspend_rate": 0.16197666437886069,
+   "pass_default_rate": 0.08830845771144279,
+   "false_block_rate": 0.07922535211267606,
+   "miss_rate": 0.5451713395638629,
+   "leak_rate": 0.22118380062305296,
+   "mean_pd": 0.22389276466579533,
+   "default_rate": 0.22031571722717913
+  },
+  {
+   "dimension": "年龄段",
+   "group": "30–39",
+   "small_sample": false,
+   "n": 1612,
+   "defaults": 326,
+   "pass_rate": 0.5918114143920595,
+   "review_rate": 0.28225806451612906,
+   "suspend_rate": 0.1259305210918114,
+   "pass_default_rate": 0.09433962264150944,
+   "false_block_rate": 0.06765163297045101,
+   "miss_rate": 0.6441717791411042,
+   "leak_rate": 0.27607361963190186,
+   "mean_pd": 0.2019462036667288,
+   "default_rate": 0.2022332506203474
+  },
+  {
+   "dimension": "年龄段",
+   "group": "40–49",
+   "small_sample": false,
+   "n": 1009,
+   "defaults": 242,
+   "pass_rate": 0.5232903865213082,
+   "review_rate": 0.33002973240832506,
+   "suspend_rate": 0.1466798810703667,
+   "pass_default_rate": 0.10984848484848485,
+   "false_block_rate": 0.05997392438070404,
+   "miss_rate": 0.5785123966942148,
+   "leak_rate": 0.2396694214876033,
+   "mean_pd": 0.22327112221543938,
+   "default_rate": 0.2398414271555996
+  },
+  {
+   "dimension": "年龄段",
+   "group": "50–59",
+   "small_sample": false,
+   "n": 360,
+   "defaults": 84,
+   "pass_rate": 0.4527777777777778,
+   "review_rate": 0.375,
+   "suspend_rate": 0.17222222222222222,
+   "pass_default_rate": 0.10429447852760736,
+   "false_block_rate": 0.08333333333333333,
+   "miss_rate": 0.5357142857142857,
+   "leak_rate": 0.20238095238095238,
+   "mean_pd": 0.24550059097030053,
+   "default_rate": 0.23333333333333334
+  },
+  {
+   "dimension": "年龄段",
+   "group": "60+",
+   "small_sample": true,
+   "n": 62,
+   "defaults": 22,
+   "pass_rate": 0.3870967741935484,
+   "review_rate": 0.43548387096774194,
+   "suspend_rate": 0.1774193548387097,
+   "pass_default_rate": 0.16666666666666666,
+   "false_block_rate": 0.05,
+   "miss_rate": 0.5909090909090909,
+   "leak_rate": 0.18181818181818182,
+   "mean_pd": 0.2582958513984731,
+   "default_rate": 0.3548387096774194
+  }
+ ]
+}

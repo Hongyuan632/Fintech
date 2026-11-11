@@ -1,0 +1,9 @@
+[
+ {
+  "time_utc": "2026-11-11 04:28:30",
+  "policy_version": "v1",
+  "model_sha256": "4f13e7997aae2b9765ceb6bb0f9af18fabc4ff8e513869b67e83243bc494f0e3",
+  "t1": 0.15,
+  "t2": 0.4
+ }
+]

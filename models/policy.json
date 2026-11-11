@@ -1,0 +1,53 @@
+{
+  "version": "v1",
+  "locked_at_utc": "2026-11-11 04:28:09",
+  "model_file": "credit_risk_model.joblib",
+  "model_sha256": "4f13e7997aae2b9765ceb6bb0f9af18fabc4ff8e513869b67e83243bc494f0e3",
+  "model": "lr_none",
+  "t1": 0.15,
+  "t2": 0.4,
+  "tiers": {
+    "pass": "p < t1：模拟通过",
+    "review": "t1 ≤ p < t2：人工复核",
+    "suspend": "p ≥ t2：模拟暂缓授信"
+  },
+  "positive_rule": "阈值类指标以 PD ≥ t2 为预测正类",
+  "constraints": {
+    "review_capacity": 0.3,
+    "max_pass_default_rate": 0.1
+  },
+  "selection_rule": "在同时满足“复核率 ≤ 复核容量”和“通过组违约率 ≤ 上限”的候选中，选通过人数最多者。若没有候选同时满足，复核容量视为硬约束（人力无法临时增加）：在满足容量的候选中选通过组违约率最低者，并记录约束冲突。",
+  "selection": {
+    "conflict": false,
+    "n_feasible": 1
+  },
+  "selected_on": "valid split (4,500)",
+  "input_fields": [
+    "LIMIT_BAL",
+    "EDUCATION",
+    "MARRIAGE",
+    "AGE",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6"
+  ],
+  "excluded_fields": [
+    "ID",
+    "SEX"
+  ]
+}
